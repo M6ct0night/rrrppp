@@ -51,8 +51,6 @@ def stagame(event):
         os.system("python monitormode.py")
     if current_text == "wifi attacks":
         os.system("python monitormode.py")
-        delay(100)
-        os.system("python wifiscan.py")
     elif current_text == "BLE attacks":
         game2()
     elif current_text == "vpn":
@@ -72,6 +70,10 @@ def stagame(event):
 def stgame(event):
     # Yazıyı eklemek için label'ı güncelle
     label.config(text="wifi attacks")  # Başlangıçta görülecek yazı
+
+def zz():
+    os.system("python goodbmo.py")
+    root.quit()
 
 
 # Ana pencereyi oluştur
@@ -97,6 +99,7 @@ label = tk.Label(root, text="", font=("Arial", 24), fg="red",
 label.pack(side="bottom", pady=20, )
 
 
+
 # 'Enter' tuşu ile yazıyı ekle
 root.bind("<Return>", stgame)
 
@@ -116,6 +119,6 @@ root.bind("<w>", stagame)
 root.bind("<W>", stagame)
 
 
-root.bind("Z",lambda event:os.system("python goodbmo.py"))
+root.bind("Z", zz)
 
 root.mainloop()

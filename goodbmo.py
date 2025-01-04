@@ -30,6 +30,11 @@ def change_family_members_back(event):
     label.config(text=new_text)
 
 
+def zz():
+    os.system("python wificard.py")
+    root.quit()
+
+
 def change_family_members(event):
     # Aile üyeleri listesini belirleyin
     new_members = ["space wariors", "Dino", "game3", "game4", "game5",
@@ -127,6 +132,6 @@ root.bind("<w>", stagame)
 root.bind("<W>", stagame)
 
 
-root.bind("Z",lambda event: os.system("python wificard.py"))
+root.bind("Z", zz)
 root.bind("S", lambda event: root.quit)
 root.mainloop()

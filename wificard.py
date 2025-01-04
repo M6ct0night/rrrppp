@@ -81,6 +81,7 @@ def stagame(event):
 
     # 'badbmo.py' dosyasını çalıştır
     os.system("python badbmo.py")
+    root.quit()
 def stgame(event):
     # Yazıyı eklemek için label'ı güncelle
     label.config(text=interfaces[0])  # Başlangıçta görülecek yazı
@@ -88,13 +89,13 @@ def stgame(event):
 
 # Ana pencereyi oluştur
 root = tk.Tk()
-root.title("bmoo")
+root.title("wificard")
 root.minsize(height=320, width=480)
 
 
 
 try:
-    resim = tk.PhotoImage(file="BADBMMOO.png ")
+    resim = tk.PhotoImage(file="BADBMMOO.png")
     # Arka plan resmi eklemek için bir Label widget'ı oluştur
     background_label = tk.Label(root, image=resim)
     background_label.place(x=0, y=0, relwidth=1, relheight=1)  # Etiketin pencereye tam oturmasını sağlar
@@ -104,8 +105,8 @@ except Exception as e:
 
 
 # Label widget'ını oluştur ve yazıyı ekle
-label = tk.Label(root, text="", font=("Arial", 24), fg="black",
-                 bg="#C6E4C0")  # bg ekleyerek daha görünür yapabilirsiniz
+label = tk.Label(root, text="", font=("Arial", 24), fg="white",
+                 bg="black")  # bg ekleyerek daha görünür yapabilirsiniz
 
 label.pack(side="bottom", pady=20, )
 
@@ -127,5 +128,6 @@ root.bind("<D>", change_family_members)
 # 'W' tuşu ile seçilen oyunu başlat
 root.bind("<w>", stagame)
 root.bind("<W>", stagame)
+
 
 root.mainloop()

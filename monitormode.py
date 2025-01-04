@@ -70,3 +70,4 @@ if __name__ == "__main__":
     if card_value:
         chkill()  # Süreçleri sonlandır
         monitor(card_value)  # Monitör moduna al
+        os.system("python wifiscan.py")
