@@ -54,7 +54,7 @@ def stagame(event):
 
     if not current_text:  # Eğer metin boşsa, varsayılan olarak space wariors başlat
         current_text = "space wariors"
-        spacewariors()
+        pass
     if current_text == "space wariors":
         spacewariors()
     elif current_text == "Flappy Huseyin":
