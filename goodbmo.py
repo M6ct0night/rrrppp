@@ -1,17 +1,12 @@
-import pygame
-import sys
 import subprocess
-import games
 import tkinter as tk
-from games import spacewariors
-from games import rps
+from games.games import spacewariors
 import os
-
-
+from gamestarter import flappyHusein,dino
 
 def change_family_members_back(event):
     # Aile üyeleri listesini belirleyin
-    new_members = ["space wariors", "Dino", "game3", "game4", "game5",
+    new_members = ["space wariors", "Flappy Huseyin", "dino", "game4", "game5",
                    "game6", "game7", "game8"]
 
     # Şu anki metni değiştir
@@ -29,7 +24,6 @@ def change_family_members_back(event):
     # Label üzerindeki metni güncelle
     label.config(text=new_text)
 
-
 def zz():
     os.system("python wificard.py")
     root.quit()
@@ -37,7 +31,7 @@ def zz():
 
 def change_family_members(event):
     # Aile üyeleri listesini belirleyin
-    new_members = ["space wariors", "Dino", "game3", "game4", "game5",
+    new_members = ["space wariors", "Flappy Huseyin", "dino", "game4", "game5",
                    "game6", "game7", "game8"]
 
     # Şu anki metni değiştir
@@ -54,35 +48,27 @@ def change_family_members(event):
 
     # Label üzerindeki metni güncelle
     label.config(text=new_text)
-def dino():
-    # Dino klasörünün tam yolunu al
-    dino_path = os.path.join(os.path.dirname(__file__), 'Dino')
-
-    # subprocess ile doğru çalışma diziniyle çalıştır
-    subprocess.run(["python", "main.py"], cwd=dino_path)
 
 def stagame(event):
     current_text = label.cget("text")
 
     if not current_text:  # Eğer metin boşsa, varsayılan olarak space wariors başlat
         current_text = "space wariors"
-
+        spacewariors()
     if current_text == "space wariors":
         spacewariors()
-    elif current_text == "Dino":
+    elif current_text == "Flappy Huseyin":
+        flappyHusein()
+    elif current_text == "dino":
         dino()
-    elif current_text == "game3":
-        game3()
-    elif current_text == "game4":
-        game4()
     elif current_text == "game5":
-        game5()
+        pass
     elif current_text == "game6":
-        game6()
+        pass
     elif current_text == "game7":
-        game7()
+        pass
     elif current_text == "game8":
-        game8()
+        pass
 
 
 def stgame(event):
