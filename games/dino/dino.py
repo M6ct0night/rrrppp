@@ -31,9 +31,9 @@ BG = pygame.transform.scale(pygame.image.load(os.path.join("Assets/Other", "Trac
 
 class Dinosaur:
     X_POS = 40
-    Y_POS = 200
-    Y_POS_DUCK = 230
-    JUMP_VEL = 7.0
+    Y_POS = 240
+    Y_POS_DUCK = 250
+    JUMP_VEL = 6.0
 
     def __init__(self):
         self.duck_img = DUCKING
@@ -139,21 +139,21 @@ class SmallCactus(Obstacle):
     def __init__(self, image):
         self.type = random.randint(0, 2)
         super().__init__(image, self.type)
-        self.rect.y = 230
+        self.rect.y = 250
 
 
 class LargeCactus(Obstacle):
     def __init__(self, image):
         self.type = random.randint(0, 2)
         super().__init__(image, self.type)
-        self.rect.y = 210
+        self.rect.y = 250
 
 
 class Bird(Obstacle):
     def __init__(self, image):
         self.type = 0
         super().__init__(image, self.type)
-        self.rect.y = 180
+        self.rect.y = 220
         self.index = 0
 
     def draw(self, SCREEN):

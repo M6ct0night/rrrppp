@@ -2,12 +2,13 @@ import subprocess
 import tkinter as tk
 from games.games import spacewariors
 import os
-from gamestarter import flappyHusein,dino
+from gamestarter import flappyHusein, dino, mushroom, tetris, snake
+
 
 def change_family_members_back(event):
     # Aile üyeleri listesini belirleyin
-    new_members = ["space wariors", "Flappy Huseyin", "dino", "game4", "game5",
-                   "game6", "game7", "game8"]
+    new_members = ["space wariors", "Flappy Huseyin", "dino", "mushroom", "mushroom",
+                   "tetris", "snake", "game8"]
 
     # Şu anki metni değiştir
     current_text = label.cget("text")
@@ -31,8 +32,8 @@ def zz():
 
 def change_family_members(event):
     # Aile üyeleri listesini belirleyin
-    new_members = ["space wariors", "Flappy Huseyin", "dino", "game4", "game5",
-                   "game6", "game7", "game8"]
+    new_members = ["space wariors", "Flappy Huseyin", "dino", "mushroom", "mushroom",
+                   "tetris", "snake", "game8"]
 
     # Şu anki metni değiştir
     current_text = label.cget("text")
@@ -61,12 +62,12 @@ def stagame(event):
         flappyHusein()
     elif current_text == "dino":
         dino()
-    elif current_text == "game5":
-        pass
-    elif current_text == "game6":
-        pass
-    elif current_text == "game7":
-        pass
+    elif current_text == "mushroom":
+        mushroom()
+    elif current_text == "tetris":
+        tetris()
+    elif current_text == "snake":
+        snake()
     elif current_text == "game8":
         pass
 

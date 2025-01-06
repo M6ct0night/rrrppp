@@ -1,0 +1,1 @@
+scanlist = [('TP-Link_CEFA', 'e8:48:b8:be:ce:fa', 3),('ttnet', 'e8:48:b8:be:net:tt', 4)]
