@@ -20,3 +20,7 @@ def snake():
 def tetris():
     script_path = os.path.join(os.getcwd(), "games", "tetris", "game.py")
     subprocess.run(["python", script_path], cwd=os.path.dirname(script_path))
+
+def ikdört():
+    script_path = os.path.join(os.getcwd(), "games", "2048", "2048.py")
+    subprocess.run(["python", script_path], cwd=os.path.dirname(script_path))
