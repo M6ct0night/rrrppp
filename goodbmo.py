@@ -27,7 +27,7 @@ def change_family_members_back(event):
 
 def zz():
     os.system("python wificard.py")
-    root.quit()
+    root.destroy()
 
 
 def change_family_members(event):
@@ -119,6 +119,6 @@ root.bind("<w>", stagame)
 root.bind("<W>", stagame)
 
 
-root.bind("Z", zz)
+root.bind("Z", zz )
 root.bind("S", lambda event: root.quit)
 root.mainloop()

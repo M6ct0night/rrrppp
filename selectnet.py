@@ -94,6 +94,9 @@ def print_selected_list(event):
     else:
         result_label.config(text="Seçimler zaten tamamlandı!")
 
+def select():
+    for widget in root.winfo_children():
+        widget.destroy()
 
 # Seçilen sayıları göstermek için etiket
 number_label = tk.Label(root, text="Seçilen Sayılar:", fg="green", bg="black", font=("Arial", 12))
@@ -114,7 +117,7 @@ root.bind("<a>", decrease_number)  # 'a' tuşuna basıldığında sayıyı azalt
 root.bind("<d>", increase_number)  # 'd' tuşuna basıldığında sayıyı artır
 root.bind("<w>", save_selected_tuple)  # 'w' tuşuna basıldığında seçilen tuple'ı kaydet
 root.bind("<Return>", print_selected_list)  # 'Enter' tuşuna basıldığında seçilen tuple'ları yazdır
-
+root.bind()
 # İlk yazdırma
 print_first_elements()
 

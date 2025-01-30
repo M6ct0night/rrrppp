@@ -81,7 +81,7 @@ def stagame(event):
 
     # 'badbmo.py' dosyasını çalıştır
     os.system("python badbmo.py")
-    root.quit()
+    root.destroy()
 def stgame(event):
     # Yazıyı eklemek için label'ı güncelle
     label.config(text=interfaces[0])  # Başlangıçta görülecek yazı

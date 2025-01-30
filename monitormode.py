@@ -27,6 +27,13 @@ def chkill():
 
 
 def monitor(card_value):
+    """Wi-Fi ile ilgili süreçleri sonlandırır."""
+    print("Wi-Fi süreçleri sonlandırılıyor...")
+    try:
+        subprocess.run(['sudo', 'airmon-ng', 'check', 'kill'], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Hata: Süreçleri sonlandırırken bir sorun oluştu: {e}")
+
     """Belirtilen kartı monitör moduna alır."""
     if not card_value:
         print("Hata: Geçerli bir kart adı sağlanmadı.")
